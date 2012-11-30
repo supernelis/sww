@@ -1,26 +1,13 @@
 #!/usr/bin/env ruby
+$: << 'lib'
 require 'rubygems'
-require 'xmpp4r'
-require 'xmpp4r/muc'
+require 'sww'
 
-include Jabber
 
-client = Client.new(JID::new("rswwbot@jabber.org"))
-client.connect
-client.auth("stoomboot")
-client.send(Presence.new.set_type(:available))
 
-muc = MUC::SimpleMUCClient.new(client)
-muc.on_message do | time, nic, text| 
-  puts "#{nic}|#{text}"
-end
+jabberspace = JabberSpace.new "rswwbot@jabber.org", "stoomboot"
 
-client.add_message_callback do |m|
-  muc.join("#{m.from}/gijs")
-end
-
-msg = Message::new("sww@jabber.org", "I want to play")
-msg.type=:chat
-client.send(msg)
+player = Player.new("gijs", jabberspace.create_room, jabberspace)
+player.play("sww@jabber.org")
 
 $stdin.readline

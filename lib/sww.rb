@@ -1,5 +1,4 @@
 require "sww/version"
+require "jabberspace"
+require "player"
 
-module Sww
-  # Your code goes here...
-end
