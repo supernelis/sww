@@ -16,6 +16,7 @@ muc.on_message do | time, nic, text|
 end
 
 client.add_message_callback do |m|
+  p m
   muc.join("#{m.from}/gijs")
 end
 
