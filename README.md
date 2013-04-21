@@ -4,21 +4,31 @@ TODO: Write a gem description
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Make sure that bundler is installed.
+If
 
-    gem 'sww'
+    $ gem list --local
 
-And then execute:
+does not show it up, it is not.
+In this case, you should install it, probably as root:
+
+    $ sudo gem install bundler
+
+If you then
+
+    $ cd <installation dir>
+
+and execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install sww
+it will pull in dependencies, namely xmpp4r.
 
 ## Usage
 
-TODO: Write usage instructions here
+Run
+
+    $ bin/swwbot.rb
 
 ## Contributing
 
