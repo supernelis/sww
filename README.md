@@ -30,6 +30,11 @@ Run
 
     $ bin/swwbot.rb
 
+## Documentation
+
+The bot relies heavily on the xmpp4r gem.
+You can find its RDoc at http://home.gna.org/xmpp4r/rdoc/.
+
 ## Contributing
 
 1. Fork it
