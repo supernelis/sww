@@ -16,8 +16,8 @@ With github, there are several possibilities:
 * Clone the repository to your own computer. This requires git to be installed on your system. For cloning, you can use your favorite git tool or the following command:
 
 ```
-        git clone https://github.com/JohanPeeters/sww.git
-        git checkout lazy_villager_for_mini_XPDays
+        git clone https://github.com/rwestgeest/sww.git
+        
 ```
 
 ### 2. Installation
@@ -57,7 +57,7 @@ You can find its RDoc at http://home.gna.org/xmpp4r/rdoc/.
 
 ### 5. Pushing your contributions to the original repository
 
-1. Fork it
+1. Fork it to your own repository
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
