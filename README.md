@@ -55,7 +55,7 @@ Run
 The bot relies heavily on the xmpp4r gem.
 You can find its RDoc at http://home.gna.org/xmpp4r/rdoc/.
 
-### 5. Pushing your contributions to our repository
+### 5. Pushing your contributions to the original repository
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
