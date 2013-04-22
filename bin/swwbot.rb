@@ -17,6 +17,7 @@ client.add_message_callback do |m|
   from = m.from
   if m.from.to_s.index('village') == 0
     p "trying to join #{m.from}"
+    sleep 3
     muc.join("#{m.from}/gijs")
   end
 #  p m.from.index('village')? "trying to join #{m.from}" : 'unimportant'
