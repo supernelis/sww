@@ -1,8 +1,26 @@
-# Sww
+# Sww - Softwarewolves Ruby Bot
 
-TODO: Write a gem description
+This is an example implementation of a bot in ruby for the digital version of the werewolves party game (rebranded to softwarewolves game). The bot does not do much - it implements the lazy villager story.
 
-## Installation
+More information on the softwarewolves game can be found at : [Softwarewolves documentation][1].
+
+## Setting up the project
+
+
+### 1. Get the code 
+
+
+With github, there are several possibilities:
+* Download the project as a zipfile from github (github button somewhere on page). 
+* Fork the project to your own github repository (github button somewhere on page), then clone it. This requires a github account.
+* Clone the repository to your own computer. This requires git to be installed on your system. For cloning, you can use your favorite git tool or the following command:
+
+```
+        git clone https://github.com/JohanPeeters/sww.git
+        git checkout lazy_villager_for_mini_XPDays
+```
+
+### 2. Installation
 
 Make sure that bundler is installed.
 If
@@ -24,18 +42,20 @@ and execute:
 
 it will pull in dependencies, namely xmpp4r.
 
-## Usage
+### 3. Usage
+
+Configure your bots username and password, and the jabber xmpp server and game coordinator in bin/swwbot.rb
 
 Run
 
     $ bin/swwbot.rb
 
-## Documentation
+### 4. Documentation
 
 The bot relies heavily on the xmpp4r gem.
 You can find its RDoc at http://home.gna.org/xmpp4r/rdoc/.
 
-## Contributing
+### 5. Pushing your contributions to our repository
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
