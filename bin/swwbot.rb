@@ -3,9 +3,7 @@ $: << 'lib'
 require 'rubygems'
 require 'sww'
 
-
-
-jabberspace = JabberSpace.new "rswwbot@awtest1.vm.bytemark.co.uk", "stoomboot"
+jabberspace = JabberSpace.on "rswwbot@awtest1.vm.bytemark.co.uk", "stoomboot"
 
 player = Player.new("gijs", jabberspace.create_room, jabberspace)
 player.play("sww@awtest1.vm.bytemark.co.uk")

@@ -4,10 +4,22 @@ require 'room'
 
 class JabberSpace
   include Jabber
-  def initialize(jabber_id, password)
-    @client = Client.new(JID::new(jabber_id))
+
+  def initialize(client, password)
+    @client = client
+    @password = password
+  end
+
+  def self.on(jabber_id, password)
+    client = Client.new(JID::new(jabber_id))
+    jabberspace = new(client, password)
+    jabberspace.connect
+    return jabberspace
+  end
+
+  def connect
     @client.connect
-    @client.auth(password)
+    @client.auth(@password)
     @client.send(Presence.new.set_type(:available))
   end
 
