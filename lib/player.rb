@@ -1,7 +1,5 @@
 class Player < Struct.new(:name, :room, :jabberspace)
   def message_from_room(nick, message)
-    puts "#{nick} says:\t\t#{message}"
-    vote(message.split(':')[1].split(',')) if message.include?("Please vote who should be hanged:")
   end
 
   def join(room_id)
