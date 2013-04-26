@@ -11,12 +11,12 @@ describe Player do
 
       player.play('game leader', 0)
     end
-
     it "joins the room on invitation" do
       jabberspace.stub(:on_invitation).and_yield('the village')
       room.should_receive(:join).with('the village', player)
       player.play('game leader', 0)
     end
+
   end
 
   describe "joining a room" do

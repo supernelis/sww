@@ -8,8 +8,5 @@ class Room < Struct.new(:muc)
   def say(message)
     muc.say(message)
   end
-  def vote(name)
-    say("I vote for #{name}")
-  end
 end
 
