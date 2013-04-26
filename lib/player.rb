@@ -6,13 +6,12 @@ class Player < Struct.new(:name, :room, :jabberspace)
 
   def join(room_id)
     room.join(room_id, self)
-    room.say("Hellloohooo")
+    room.say("Helloohooo")
   end
 
-  def play(game_leader)
-    puts "starting to play"
+  def play(game_leader, delay = 5)
     jabberspace.on_invitation do |room_id|
-      sleep(5)
+      sleep(delay)
       join(room_id)
     end
 
