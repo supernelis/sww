@@ -1,5 +1,6 @@
 class Player < Struct.new(:name, :room, :jabberspace)
   def message_from_room(nick, message)
+    puts "#{nick} says:\t\t#{message}"
   end
 
   def join(room_id)
@@ -16,17 +17,5 @@ class Player < Struct.new(:name, :room, :jabberspace)
     jabberspace.send_message game_leader, "I want to play"
   end
 
-  private
-  def vote(players)
-    players = players.map{|p| p.strip}
-    players = players - [name]
-    room.vote(random_player(players))
-  end
-  def random_player(players)
-    players[randomizer.rand(players.size)]
-  end
-  def randomizer
-    @randomizer ||= Random.new
-  end
 end
 
