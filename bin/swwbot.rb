@@ -5,9 +5,9 @@ require 'sww'
 
 
 
-jabberspace = JabberSpace.new "rswwbot@jabber.org", "stoomboot"
+jabberspace = JabberSpace.new "rswwbot@awtest1.vm.bytemark.co.uk", "stoomboot"
 
 player = Player.new("gijs", jabberspace.create_room, jabberspace)
-player.play("sww@jabber.org")
+player.play("sww@awtest1.vm.bytemark.co.uk")
 
 $stdin.readline

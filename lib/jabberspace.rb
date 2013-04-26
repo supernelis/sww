@@ -1,6 +1,6 @@
 require 'xmpp4r'
 require 'xmpp4r/muc'
-
+require 'room'
 
 class JabberSpace
   include Jabber
@@ -13,7 +13,7 @@ class JabberSpace
 
   def on_invitation(&block)
     @client.add_message_callback do |m|
-      yield(m.from)
+      yield(m.from) if m.from.to_s.start_with?('village')
     end
   end
 
@@ -28,21 +28,5 @@ class JabberSpace
   end
 end
 
-class Room < Struct.new(:muc)
-  def join(room, player)
-    puts "joining #{room}"
-    muc.on_message do | time, nic, text| 
-      player.message_from_room(nic, text)
-    end
-    muc.join("#{room}/#{player.name}")
-  end
-  def say(message)
-    puts "saying #{message}"
-    muc.say(message)
-  end
-  def vote(name)
-    say("I vote for #{name}")
-  end
-end
 
 
