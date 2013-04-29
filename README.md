@@ -1,4 +1,3 @@
-
 # Sww - Softwarewolves Ruby Bot
 
 This is an example implementation of a bot in ruby for the digital version of the werewolves party game (rebranded to softwarewolves game). The bot does not do much - it implements the lazy villager story.
@@ -55,17 +54,16 @@ Run
 
 Test using 
 
-```bash
-rake
-```
+    $ rake
+
 
 A guardfile is included so run
 
-```bash
-guard
-```
+    $ guard
 
-to run tests of file that change automatically.
+
+to run tests of files that change automatically.
+
 ### 5. Documentation
 
 The bot relies heavily on the xmpp4r gem.
