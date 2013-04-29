@@ -66,12 +66,12 @@ guard
 ```
 
 to run tests of file that change automatically.
-### 4. Documentation
+### 5. Documentation
 
 The bot relies heavily on the xmpp4r gem.
 You can find its RDoc at http://home.gna.org/xmpp4r/rdoc/.
 
-### 5. Pushing your contributions to the original repository
+### 6. Pushing your contributions to the original repository
 
 1. Fork it to your own repository
 2. Create your feature branch (`git checkout -b my-new-feature`)
