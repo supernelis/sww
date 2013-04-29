@@ -51,6 +51,21 @@ Run
 
     $ bin/swwbot.rb
 
+### 4. Test
+
+Test using 
+
+```bash
+rake
+```
+
+A guardfile is included so run
+
+```bash
+guard
+```
+
+to run tests of file that change automatically.
 ### 4. Documentation
 
 The bot relies heavily on the xmpp4r gem.
